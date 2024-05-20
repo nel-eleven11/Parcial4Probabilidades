@@ -65,9 +65,9 @@ P = np.array([
 P es la matriz de transición, donde cada fila representa un clavo y cada columna representa la probabilidad de transición a otros clavos o casilleros.
 """
 
-# Inicializar un vector de estado con igual probabilidad en el primer clavo
+# Inicializar un vector de estado con igual probabilidad en el primer clavo y 0 en los demás
 estado = np.zeros(P.shape[0])
-estado[0] = 1  # Asumiendo que la pelota comienza en el clavo 0
+estado[0] = 1
 """
 estado es un vector que representa la probabilidad de estar en cada clavo al comienzo.
 
@@ -75,9 +75,8 @@ Inicializamos este vector con 1 en el primer clavo.
 """
 
 # Iterar la matriz de transición muchas veces
-for _ in range(1000):  # Número grande para asegurar convergencia
+for _ in range(1000):
     estado = np.dot(estado, P)
-
 """
 Multiplicamos el vector estado por la matriz de transición P repetidamente para simular el proceso de la cadena de Markov hasta alcanzar un estado estable.
 """
