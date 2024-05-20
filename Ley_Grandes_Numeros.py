@@ -64,10 +64,10 @@ def main():
     print("\nProbabilidades usando la Ley de los Grandes Números:")
     # Imprime las probabilidades de cada casillero.
     for i, prob in enumerate(probabilities_lgn):
-        print(f'Casillero {i + 1}: {prob:.5f}')
+        print(f'Casillero {i + 21}: {prob:.5f}')
 
     # Crear los nombres de los casilleros
-    bins = [f'Casillero {i + 1}' for i in range(n_levels + 1)]
+    bins = [f'Casillero {i + 21}' for i in range(n_levels + 1)]
 
     # Crear el gráfico de barras
     plt.figure(figsize=(12, 6))
